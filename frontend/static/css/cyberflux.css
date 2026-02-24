@@ -299,3 +299,11 @@ p{
     opacity: 0.7;
     
 }
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+    color: white;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberFlux URL Guard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Correct CSS Path -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+        <img src="{{ url_for('static', filename='images/cyberfluxlogo.png') }}" class="logo">
+
+        <a href="/" class="nav link">Home</a>
+        <a href="/about" class="nav link">About</a>
+        <a href="/research" class="nav link">Research</a>
+        <a href="/contact" class="nav link">Contact</a>
+    </div>
+
+
+    <!-- MAIN SECTION -->
+    <div class="main-content">
+
+        <div class="side-content">
+
+            <h1>CyberFlux URL Guard</h1>
+            <p>
+                Instant protection against phishing, malware and malicious domains.
+                Enter a URL to check its security reputation.
+            </p>
+
+            <!-- URL FORM -->
+            <form method="POST" class="url-form">
+                <input
+                    class="place"
+                    type="text"
+                    name="url"
+                    placeholder="https://example.com"
+                    required
+                >
+
+                <button class="check" type="submit">
+                    Check URL <i class="fa-solid fa-shield"></i>
+                </button>
+            </form>
+
+
+            <!-- RESULT SECTION -->
+            {% if result %}
+            <div class="result-box">
+
+                <h2>Scan Result</h2>
+
+                <p>
+                    <strong>Risk Level:</strong>
+                    <span class="
+                        {% if result['Risk Level'] == 'Safe' %}
+                            safe
+                        {% elif result['Risk Level'] == 'Suspicious' %}
+                            suspicious
+                        {% else %}
+                            malicious
+                        {% endif %}
+                    ">
+                        {{ result["Risk Level"] }}
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Confidence:</strong>
+                    {{ result["Confidence"] }}
+                </p>
+
+                <p>
+                    <strong>Total Risk Score:</strong>
+                    {{ result["Total Risk Score"] }}
+                </p>
+
+                {% if result.get("ISP Information") %}
+                <hr>
+                <h3>Network Information</h3>
+                <p><strong>IP:</strong> {{ result["ISP Information"]["ip"] }}</p>
+                <p><strong>ISP:</strong> {{ result["ISP Information"]["isp"] }}</p>
+                <p><strong>Country:</strong> {{ result["ISP Information"]["country"] }}</p>
+                {% endif %}
+
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 CyberFlux | Secure Browsing Technology</p>
+    </footer>
+
+</body>
+</html>

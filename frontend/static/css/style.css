@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+nav {
+    background: #1e293b;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #60a5fa;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+.container {                                                                                                                                                text-align: center;
+    margin-top: 80px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #60a5fa;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3b82f6;
+}
+
+.safe {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.suspicious {
+    color: #facc15;
+    font-weight: bold;
+}
+
+.malicious {
+    color: #ef4444;
+    font-weight: bold;
+}

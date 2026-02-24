@@ -1,0 +1,7 @@
+Flask==3.0.2
+requests==2.31.0
+python-whois==0.8.0
+tldextract==5.1.1
+dnspython==2.6.1
+idna==3.6
+gunicorn

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h2>Scan Result</h2>
+
+    <p><strong>URL:</strong> {{ result["URL"] }}</p>
+    <p><strong>Risk Level:</strong> {{ result["Risk Level"] }}</p>
+    <p><strong>Total Score:</strong> {{ result["Total Risk Score"] }}</p>
+    <p><strong>Confidence:</strong> {{ result["Confidence"] }}</p>
+
+    <a href="/">Scan Another URL</a>
+
+</div>
+
+</body>
+</html>
