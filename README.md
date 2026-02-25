@@ -168,7 +168,7 @@ python run.py
 
 6. Final analysis report is returned to the user.
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 - Harshul Agarwal
 -  Anmol Kumar
 -  Ayush Varshney
