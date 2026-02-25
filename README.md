@@ -1,4 +1,4 @@
-# 🔥 CYBERFLUX
+#  CYBERFLUX
 
 CYBERFLUX is a modular URL intelligence and phishing detection framework built with Python and a modern web interface.
 
@@ -8,20 +8,20 @@ Designed with a scalable architecture, CYBERFLUX separates routing, analysis log
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🔍 Multi-layer URL analysis engine
-- 🧠 Modular check-based architecture
-- 📊 Risk scoring system
-- 🌍 Geo & ISP lookup
-- 🔐 HTTPS & domain validation checks
-- 🧪 Unit testing support
-- 🎨 Clean frontend interface
-- 🗄 SQLite database integration
+-  Multi-layer URL analysis engine
+-  Modular check-based architecture
+-  Risk scoring system
+-  Geo & ISP lookup
+-  HTTPS & domain validation checks
+-  Unit testing support
+-  Clean frontend interface
+-  SQLite database integration
 
 ---
 
-## 🧠 Security Checks Implementation
+##  Security Checks Implementation
 
 The system performs multiple phishing and suspicious pattern checks:
 
